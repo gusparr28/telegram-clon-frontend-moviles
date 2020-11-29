@@ -1,0 +1,13 @@
+<ion-content>
+  <ion-slides pager="true" class="slide-full">
+    <ion-slide *ngFor="let slide of slides">
+      <div>
+        <ion-title>{{slide.title}}</ion-title>
+        <ion-label>{{slide.description}}</ion-label>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <ion-button>Start Messaging</ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
