@@ -1,9 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>signin</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/code"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Your name</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="title">
+    <ion-label>Enter your name and add a profile picture.</ion-label>
+  </div>
+  <div>
+    <ion-fab class="camera-button" vertical="top" horizontal="start" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <div class="inputs">
+      <ion-input placeholder="First name (required)"></ion-input>
+      <ion-input placeholder="Last name (optional)"></ion-input>
+    </div>
+    <div class="service-terms">
+      <ion-label>By signing up, <br> you agree to the <b>Terms of Service</b>.</ion-label>
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button href="/home/settings">
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
