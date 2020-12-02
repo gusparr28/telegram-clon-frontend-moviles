@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/number"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="verifyCode()"><b>Next</b></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-title>Enter code</ion-title>
+    <div class="subtitle">
+      <ion-label>We've sent an SMS with an activation code to your phone.</ion-label>
+    </div>
+    <ion-input placeholder="Code" [(ngModel)]="code"></ion-input>
+  </div>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-content>
+  <ion-slides pager="true" class="slide-full">
+    <ion-slide *ngFor="let slide of slides">
+      <div class="container">
+        <div>
+          <img [src]="slide.img">
+        </div>
+        <div class="text">
+          <ion-title>{{slide.title}}</ion-title>
+          <ion-label>{{slide.description}}</ion-label>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <ion-button (click)="goSignUp()">Don't you have an account?</ion-button>
+      <ion-button (click)="goSignIn()">Already have an account?</ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/code"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="postData()">Next</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="title">
+    <ion-label>Enter your name and add a profile picture.</ion-label>
+  </div>
+  <div>
+    <ion-fab class="camera-button" vertical="top" horizontal="start" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <div class="inputs">
+      <ion-input [(ngModel)]="name" placeholder="First name"></ion-input>
+      <ion-input [(ngModel)]="lastName" placeholder="Last name"></ion-input>
+    </div>
+    <div class="service-terms">
+      <ion-label>By signing up, <br> you agree to the <b>Terms of Service</b>.</ion-label>
+    </div>
+  </div>
+</ion-content>
