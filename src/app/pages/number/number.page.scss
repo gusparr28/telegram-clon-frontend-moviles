@@ -1,9 +1,17 @@
 div {
-    text-align: left;
-    margin-top: 16px;
-    margin-left: 10px;
+    text-align: center;
+    margin-top: 50%;
 
-    ion-label {
-        color: gray;
+    ion-title {
+        font-size: 30px;
     }
 }
+
+ion-list {
+    margin-top: 5px;
+}
+
+.subtitle {
+    margin-top: 20px;
+}
+

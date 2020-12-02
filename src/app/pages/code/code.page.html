@@ -13,5 +13,11 @@
     <div class="subtitle">
       <ion-label>We've sent an SMS with an activation code to your phone.</ion-label>
     </div>
+    <ion-input [(ngModel)]="code"></ion-input>
   </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="verifyCode()">
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

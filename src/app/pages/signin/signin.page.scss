@@ -1,23 +1,16 @@
-.title {
-    margin: 10px;
-    padding: 12px;
+div {
+    text-align: center;
+    margin-top: 50%;
 
-    ion-label {
-        color: gray;
+    ion-title {
+        font-size: 30px;
     }
 }
 
-.camera-button {
-    margin-top: 60px;
-    padding-left: 10px;
+ion-list {
+    margin-top: 5px;
 }
 
-.inputs {
-    margin-left: 100px;
-}
-
-.service-terms {
-    text-align: left;
-    margin-top: 490px;
-    padding-left: 10px;
+.subtitle {
+    margin-top: 20px;
 }

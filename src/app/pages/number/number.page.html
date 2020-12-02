@@ -1,26 +1,26 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
+      <ion-button>Cancel</ion-button>
     </ion-buttons>
-    <ion-title>Your Phone</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="sendNumber()"><b>Next</b></ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div>
+    <ion-title>Your Phone</ion-title>
+    <div class="subtitle">
+      <ion-label>Please confirm your contry code and enter your phone number.</ion-label>
+    </div>
+  </div>
   <ion-list>
     <ion-item>Venezuela</ion-item>
     <ion-item>
-      +58 &nbsp;&nbsp;&nbsp;
-      <ion-input></ion-input>
+      <ion-label>+58</ion-label>
+      <ion-input [(ngModel)]="number"></ion-input>
     </ion-item>
   </ion-list>
-  <div>
-    <ion-label>Please confirm your contry code and enter your phone number.</ion-label>
-  </div>
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button href="/code">
-      <ion-icon name="arrow-forward-outline"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>

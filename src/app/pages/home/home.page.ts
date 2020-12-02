@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-home',
@@ -40,9 +42,25 @@ export class HomePage implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private _router: Router, private _utilsService: UtilsService) { }
 
   ngOnInit() {
+  }
+
+  public goSignUp() {
+    this._utilsService.present("Please wait...");
+    setTimeout(() => {
+      this._utilsService.dismiss();
+      this._router.navigate(["/number"]);
+    }, 500);
+  }
+
+  public goSignIn() {
+    this._utilsService.present("Please wait...");
+    setTimeout(() => {
+      this._utilsService.dismiss();
+      this._router.navigate(["/signin"]);
+    }, 500);
   }
 
 }
