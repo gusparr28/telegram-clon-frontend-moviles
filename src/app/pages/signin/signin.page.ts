@@ -23,15 +23,26 @@ export class SigninPage implements OnInit {
   public sendNumber() {
     this._utilsService.present('Please wait...');
     this.numberSubscription = this._authService.signIn({ number: "+58" + this.number }).subscribe(res => {
+      this._utilsService.presentToast('Message sent', 'success');
       if (res.status == 200) {
         this._authService.sendMessage({ number: "+58" + this.number }).subscribe(res => {
-          this._utilsService.dismiss();
-          this._router.navigate(['/code/signin/', res.token]);
-        })
-      } else {
-        // mostrar toast con el error proveniente del back
+          setTimeout(() => {
+            this._utilsService.dismiss();
+            localStorage.setItem('number', res.number);
+            this._router.navigate(['/code/signin/', res.token]);
+          }, 500);
+        });
       }
+    }, () => {
+      setTimeout(() => {
+        this._utilsService.dismiss();
+        this._utilsService.presentToast("Number doesn't exist", 'danger');
+      }, 500);
     })
+  }
+
+  ionViewDidLeave() {
+    this.numberSubscription.unsubscribe();
   }
 
 }

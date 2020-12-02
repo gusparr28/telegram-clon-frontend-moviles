@@ -11,32 +11,32 @@ export class HomePage implements OnInit {
 
   public slides: { img: string, title: string, description: string }[] = [
     {
-      img: "",
+      img: "https://res.cloudinary.com/instagram-web2/image/upload/v1606937772/telegram-clon-moviles/image6_dywa5g.png",
       title: "Telegram",
       description: "The world's fastest messaging app. It is free and secure."
     },
     {
-      img: "",
+      img: "https://res.cloudinary.com/instagram-web2/image/upload/v1606937772/telegram-clon-moviles/image2_ihjaq2.png",
       title: "Fast",
       description: "Telegram delivers messages faster than any other application."
     },
     {
-      img: "",
+      img: "https://res.cloudinary.com/instagram-web2/image/upload/v1606937772/telegram-clon-moviles/image3_okd4lk.png",
       title: "Free",
       description: "Telegram is free forever. No ads. No subscription fees."
     },
     {
-      img: "",
+      img: "https://res.cloudinary.com/instagram-web2/image/upload/v1606937772/telegram-clon-moviles/image4_fj05te.png",
       title: "Powerful",
       description: "Telegram has no limits on the size of your chats and media."
     },
     {
-      img: "",
+      img: "https://res.cloudinary.com/instagram-web2/image/upload/v1606937772/telegram-clon-moviles/image5_sr8li0.png",
       title: "Secure",
       description: "Telegram keeps your messages safe from hacker attacks."
     },
     {
-      img: "",
+      img: "https://res.cloudinary.com/instagram-web2/image/upload/v1606937767/telegram-clon-moviles/image1_zl0qql.png",
       title: "Cloud-Based",
       description: "Telegram lets you access your messages from multiple devices."
     }

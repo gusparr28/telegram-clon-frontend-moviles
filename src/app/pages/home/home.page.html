@@ -1,9 +1,14 @@
 <ion-content>
   <ion-slides pager="true" class="slide-full">
     <ion-slide *ngFor="let slide of slides">
-      <div>
-        <ion-title>{{slide.title}}</ion-title>
-        <ion-label>{{slide.description}}</ion-label>
+      <div class="container">
+        <div>
+          <img [src]="slide.img">
+        </div>
+        <div class="text">
+          <ion-title>{{slide.title}}</ion-title>
+          <ion-label>{{slide.description}}</ion-label>
+        </div>
       </div>
     </ion-slide>
     <ion-slide>

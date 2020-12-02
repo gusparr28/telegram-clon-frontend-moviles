@@ -11,9 +11,11 @@
       src="https://res.cloudinary.com/instagram-web2/image/upload/v1604963821/wunderlist-clon-moviles/person_qbie2q.png">
     <div>
       <ion-title>
-        Gustavo Parra
+        {{userInfo.name + " " + userInfo.lastName}}
       </ion-title>
-      <ion-label>+58 424-6871962</ion-label>
+      <ion-label>
+        {{userInfo.number}}
+      </ion-label>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -32,6 +34,11 @@
   <ion-list>
     <ion-item *ngFor="let item3 of items3">
       {{item3}}
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item *ngFor="let item4 of items4">
+      <ion-button (click)="signOut()" color="danger" fill="clear">{{item4}}</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>

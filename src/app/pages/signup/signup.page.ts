@@ -13,7 +13,7 @@ export class SignupPage implements OnInit {
 
   public name: String;
   public lastName: String;
-  public number: String;
+  public number: any;
   public userSubscription: Subscription;
 
   constructor(private _authService: AuthService,
@@ -32,10 +32,11 @@ export class SignupPage implements OnInit {
 
   public postData() {
     this._utilsService.present('Please wait...');
-    this.userSubscription = this._authService.signUp({ name: this.name, lastName: this.lastName, number: this.number }).subscribe(() => {
+    this.userSubscription = this._authService.signUp({ name: this.name, lastName: this.lastName, number: this.number }).subscribe(res => {
       this._utilsService.dismiss();
       this._utilsService.presentToast('User successfully signed up', 'success');
       setTimeout(() => {
+        localStorage.setItem('number', res.number);
         this._router.navigate(['/home/settings']);
       }, 500);
     }, err => {

@@ -4,9 +4,10 @@
 
 export const environment = {
   production: false,
-  LOCALHOST_CODE: 'http://localhost:3000/code',
-  LOCALHOST_SIGNUP: 'http://localhost:3000/signup',
-  LOCALHOST_SIGNIN: 'http://localhost:3000/signin'
+  LOCALHOST_CODE: 'https://telegram-clon-moviles.herokuapp.com/code',
+  LOCALHOST_SIGNUP: 'https://telegram-clon-moviles.herokuapp.com/signup',
+  LOCALHOST_SIGNIN: 'https://telegram-clon-moviles.herokuapp.com/signin',
+  LOCALHOST_PROFILE: 'https://telegram-clon-moviles.herokuapp.com/profile/',
 };
 
 /*

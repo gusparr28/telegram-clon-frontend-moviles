@@ -27,12 +27,18 @@ export class CodePage implements OnInit {
 
   public verifyCode() {
     if (this._router.url == `/code/signin/${this.id}`) {
+      this._utilsService.present('Please wait...');
       if (this.code === this.id) {
-        this._utilsService.presentToast('Valid code', 'success');
-        this._router.navigate(["home/settings"]);
+        setTimeout(() => {
+          this._utilsService.dismiss();
+          this._utilsService.presentToast('Valid code', 'success');
+          this._router.navigate(["home/settings"]);
+        }, 500)
       } else {
-        this._utilsService.dismiss();
-        this._utilsService.presentToast('Invalid code', 'danger');
+        setTimeout(() => {
+          this._utilsService.dismiss();
+          this._utilsService.presentToast('Invalid code', 'danger');
+        }, 500);
       }
     } else {
       this._utilsService.present('Please wait...');

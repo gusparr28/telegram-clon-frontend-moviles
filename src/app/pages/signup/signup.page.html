@@ -3,7 +3,9 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/code"></ion-back-button>
     </ion-buttons>
-    <ion-title>Your name</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="postData()">Next</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -25,9 +27,4 @@
       <ion-label>By signing up, <br> you agree to the <b>Terms of Service</b>.</ion-label>
     </div>
   </div>
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="postData()">
-      <ion-icon name="arrow-forward-outline"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
 </ion-content>
