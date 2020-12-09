@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contacts',
@@ -9,6 +10,10 @@ export class ContactsPage {
 
   public contacts = ['contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact']
 
-  constructor() {}
+  constructor(private _router: Router) {}
+
+  public viewChat() {
+    this._router.navigate(['/view-chat']);
+  }
 
 }

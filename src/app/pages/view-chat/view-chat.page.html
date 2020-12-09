@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeViewChat()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        <ion-label>Chats</ion-label>
+      </ion-button>
+    </ion-buttons>
+    <div>
+      <ion-title>Guti</ion-title>
+      <ion-label>last seen yesterday</ion-label>
+    </div>
+    <ion-buttons slot="end">
+      <img (click)="viewContact()"
+        src="https://res.cloudinary.com/instagram-web2/image/upload/v1604963821/wunderlist-clon-moviles/person_qbie2q.png">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-col size="9">
+      <b>Guti</b><br>
+      <span>Hola, ¿cómo estás?</span>
+    </ion-col>
+    <ion-col offset="3" size="9">
+      <b>Luis</b><br>
+      <span>Hola. Bien, ¿y tú?</span>
+    </ion-col>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="attach-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-textarea placeholder="Message"></ion-textarea>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="end" name="arrow-up-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

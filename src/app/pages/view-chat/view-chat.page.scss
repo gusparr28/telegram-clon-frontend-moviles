@@ -1,0 +1,20 @@
+img {
+    width: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    text-align: center;
+    margin-right: 40px;
+
+    ion-title {
+        font-weight: bold;
+    }
+
+    ion-label {
+        color: gray;
+        font-size: smaller;
+    }
+}

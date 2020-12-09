@@ -7,6 +7,7 @@ import { ChatsPage } from './chats.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { ChatsPageRoutingModule } from './chats-routing.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { ChatsPageRoutingModule } from './chats-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    ChatsPageRoutingModule
+    ChatsPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [ChatsPage]
 })

@@ -1,0 +1,29 @@
+img {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+
+    ion-title {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    ion-label {
+        margin: 0;
+        color: gray;
+    }
+}
+
+.icons {
+    ion-icon {
+        font-size: 40px;
+        margin: 20px;
+    }
+}

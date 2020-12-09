@@ -7,18 +7,18 @@
     </ion-buttons>
     <ion-title>Chats</ion-title>
     <ion-buttons slot="primary">
-      <ion-button>
+      <ion-button (click)="openCreateChatModal()">
         <ion-icon slot="end" name="create-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-  <ion-searchbar placeholder="Search for messages or users"></ion-searchbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Search for messages or users"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let chat of chats">
-      {{chat}}
-    </ion-item>
+    <app-chat *ngFor="let chat of chats" [chat]="chat"></app-chat>
   </ion-list>
 </ion-content>

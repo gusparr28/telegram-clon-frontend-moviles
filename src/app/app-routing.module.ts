@@ -29,6 +29,14 @@ const routes: Routes = [
   {
     path: 'code/signin/:id',
     loadChildren: () => import('./pages/code/code.module').then( m => m.CodePageModule)
+  },
+  {
+    path: 'view-chat',
+    loadChildren: () => import('./pages/view-chat/view-chat.module').then( m => m.ViewChatPageModule)
+  },
+  {
+    path: 'view-contact',
+    loadChildren: () => import('./pages/view-contact/view-contact.module').then( m => m.ViewContactPageModule)
   }
 ];
 @NgModule({
