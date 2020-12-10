@@ -11,13 +11,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ComponentsModule } from './components/components.module';
-import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-const config: SocketIoConfig = { url: 'https://telegram-clon-moviles.herokuapp.com/', options: {} };
+// import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+// const config: SocketIoConfig = { url: 'https://telegram-clon-moviles.herokuapp.com/', options: {} };
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, ComponentsModule, SocketIoModule.forRoot(config)],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, ComponentsModule],
   providers: [
     StatusBar,
     SplashScreen,

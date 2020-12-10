@@ -14,7 +14,7 @@ export class ChatsPage {
 
   public chats = ['chat', 'chat', 'chat', 'chat', 'chat', 'chat', 'chat', 'chat', 'chat', 'chat', 'chat', 'chat', 'chat', 'chat'];
 
-  constructor(private _socket: Socket, private _modalCtrl: ModalController) { }
+  constructor(private _modalCtrl: ModalController) { }
 
   ngOnInit() {
   }
