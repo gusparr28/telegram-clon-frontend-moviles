@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
-import { Socket } from 'ngx-socket-io';
-
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 
 @Component({
