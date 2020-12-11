@@ -1,20 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button>
-        Edit
-      </ion-button>
-    </ion-buttons>
     <ion-title>Chats</ion-title>
-  </ion-toolbar>
-  <ion-toolbar>
-    <ion-searchbar placeholder="Search for messages or users"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div *ngIf="chats.length == 0" class="noChatsContainer">
+    <img
+      src="https://res.cloudinary.com/instagram-web2/image/upload/v1607716414/telegram-clon-moviles/home_q1ave5.ico">
+    <p><b>Start chating with someone else by pressing + button.</b></p>
+  </div>
   <ion-list>
-    <app-chat *ngFor="let chat of chats; let i = index" [chat]="otherUser[i]"></app-chat>
+    <app-chat *ngFor="let chat of chats; let i = index" [chat]="chat"></app-chat>
   </ion-list>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="openCreateChatModal()">

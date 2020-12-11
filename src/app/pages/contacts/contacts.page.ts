@@ -8,12 +8,5 @@ import { Router } from '@angular/router';
 })
 export class ContactsPage {
 
-  public contacts = ['contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact', 'contact']
-
-  constructor(private _router: Router) {}
-
-  public viewChat() {
-    this._router.navigate(['/view-chat']);
-  }
-
+  constructor() { }
 }

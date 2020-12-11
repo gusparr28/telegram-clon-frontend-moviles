@@ -7,8 +7,8 @@
       </ion-button>
     </ion-buttons>
     <div>
-      <ion-title>Guti</ion-title>
-      <ion-label>last seen yesterday</ion-label>
+      <ion-title>{{userName}}</ion-title>
+      <ion-label>{{isTyping}}</ion-label>
     </div>
     <ion-buttons slot="end">
       <img (click)="viewContact()"
@@ -18,16 +18,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-col size="9">
-      <b>Guti</b><br>
-      <span>Hola, ¿cómo estás?</span>
-    </ion-col>
-    <ion-col offset="3" size="9">
-      <b>Luis</b><br>
-      <span>Hola. Bien, ¿y tú?</span>
-    </ion-col>
-  </ion-grid>
+  <ion-list>
+    <ion-item lines="none" *ngFor="let message of messages">
+      <ion-label [style]="id !== message.user ? 'text-align: left' : 'text-align: right'">{{message.message}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
 
 <ion-footer>
@@ -37,7 +33,7 @@
         <ion-icon name="attach-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-textarea placeholder="Message" (ionChange)="valueChange($event.detail.value)"></ion-textarea>
+    <ion-textarea [value]="sentMessage" placeholder="Message" (ionChange)="valueChange($event.detail.value)"></ion-textarea>
     <ion-buttons slot="primary">
       <ion-button (click)="onChangeMessage()">
         <ion-icon slot="end" name="arrow-up-circle"></ion-icon>

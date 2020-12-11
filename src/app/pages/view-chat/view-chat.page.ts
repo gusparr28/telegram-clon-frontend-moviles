@@ -13,8 +13,11 @@ export class ViewChatPage implements OnInit {
   public sentMessage: any;
   public id: string;
   public userSubscription: Subscription;
-  public name: string;
+  public number: string;
   public messages: any;
+  public userName: string;
+  public isTyping: string;
+  public name: string;
 
   constructor(private _socketsService: SocketsService,
     private _router: Router,
@@ -22,11 +25,10 @@ export class ViewChatPage implements OnInit {
     private _userService: UserService
   ) {
     this._socketsService.socket.on('message', (message: any) => {
-      console.log('MENSAJE', message);
       this.messages = message;
     });
     this._socketsService.socket.on('user-typing', ({ message }) => {
-      console.log(message);
+      this.isTyping = message;
     });
     this.id = localStorage.getItem('number');
   }
@@ -37,9 +39,9 @@ export class ViewChatPage implements OnInit {
     });
     this.userSubscription = this._userService.getUserInfo(this.id).subscribe(res => {
       this.name = res.user.name;
+      this.number = res.user.number;
     });
     this._socketsService.getChatById(this._route.snapshot.paramMap.get('id')).subscribe((res: any) => {
-      console.log(res);
       this.messages = res.chat.messageInfo.map(v => {
         return {
           message: v.message,
@@ -47,6 +49,7 @@ export class ViewChatPage implements OnInit {
         };
       });
     });
+    this.userName = this._socketsService.currentName;
   }
 
   public closeViewChat() {
@@ -66,10 +69,11 @@ export class ViewChatPage implements OnInit {
         }
       }),
       {
-        user: this.name,
+        user: this.number,
         message: this.sentMessage
       }
     ]);
+    this.sentMessage = "";
   }
 
   public valueChange(event: any) {

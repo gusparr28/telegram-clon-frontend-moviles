@@ -1,27 +1,32 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import * as io from 'socket.io-client';
+const io = require('socket.io-client');
 
 @Injectable({
   providedIn: 'root'
 })
 export class SocketsService {
   public socket: any;
+  public currentName: string;
 
   constructor(private _http: HttpClient) {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('https://telegram-clon-moviles.herokuapp.com/');
   }
 
   public createChat(body: any) {
-    return this._http.post('http://localhost:3000/chat', body);
+    return this._http.post('https://telegram-clon-moviles.herokuapp.com/chat', body);
   }
 
   public getChatById(id: string) {
-    return this._http.get(`http://localhost:3000/chat/${id}`);
+    return this._http.get(`https://telegram-clon-moviles.herokuapp.com/chat/${id}`);
   }
 
   public getChatsByUser(id: any) {
-    return this._http.get(`http://localhost:3000/get-chats/${id}`);
+    return this._http.get(`https://telegram-clon-moviles.herokuapp.com/get-chats/${id}`);
+  }
+
+  public deleteChat(id: any) {
+    return this._http.delete(`https://telegram-clon-moviles.herokuapp.com/delete/${id}`);
   }
 }

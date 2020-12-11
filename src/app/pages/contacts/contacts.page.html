@@ -1,21 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Contacts</ion-title>
-    <ion-buttons slot="primary">
-      <ion-button slot="end">
-        <ion-icon name="add-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-  <ion-toolbar>
-    <ion-searchbar placeholder="Search"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item (click)="viewChat()" *ngFor="let contact of contacts">
-      {{contact}}
-    </ion-item>
-  </ion-list>
+
 </ion-content>

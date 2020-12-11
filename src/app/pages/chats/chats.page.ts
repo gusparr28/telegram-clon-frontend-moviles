@@ -11,10 +11,14 @@ import { SocketsService } from 'src/app/services/sockets.service';
 })
 export class ChatsPage {
   public id: string;
-  public chats: any;
+  public chats: any = [];
   public otherUser: any = [];
 
-  constructor(private _modalCtrl: ModalController, private _socketsService: SocketsService) { }
+  constructor(private _modalCtrl: ModalController, private _socketsService: SocketsService) {
+    this._socketsService.socket.on('chat', () => {
+      console.log('created chat');
+    });
+  }
 
   ngOnInit() {
     this.id = localStorage.getItem('number');
@@ -30,7 +34,6 @@ export class ChatsPage {
           return userTwo;
         }
       });
-      console.log(this.otherUser);
     });
   }
 

@@ -1,12 +1,5 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="primary">
-      <ion-button slot="end">
-        Edit
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-  <ion-toolbar>
     <img
       src="https://res.cloudinary.com/instagram-web2/image/upload/v1604963821/wunderlist-clon-moviles/person_qbie2q.png">
     <div>
@@ -21,21 +14,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item *ngFor="let item1 of items1">
-      {{item1}}
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-item *ngFor="let item2 of items2">
-      {{item2}}
-    </ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-item *ngFor="let item3 of items3">
-      {{item3}}
-    </ion-item>
-  </ion-list>
   <ion-list>
     <ion-item *ngFor="let item4 of items4">
       <ion-button (click)="signOut()" color="danger" fill="clear">{{item4}}</ion-button>
