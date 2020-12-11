@@ -37,9 +37,9 @@
         <ion-icon name="attach-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-textarea placeholder="Message"></ion-textarea>
+    <ion-textarea placeholder="Message" (ionChange)="valueChange($event.detail.value)"></ion-textarea>
     <ion-buttons slot="primary">
-      <ion-button>
+      <ion-button (click)="onChangeMessage()">
         <ion-icon slot="end" name="arrow-up-circle"></ion-icon>
       </ion-button>
     </ion-buttons>

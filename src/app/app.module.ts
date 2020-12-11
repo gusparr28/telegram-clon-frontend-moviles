@@ -11,8 +11,6 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ComponentsModule } from './components/components.module';
-// import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-// const config: SocketIoConfig = { url: 'https://telegram-clon-moviles.herokuapp.com/', options: {} };
 
 @NgModule({
   declarations: [AppComponent],

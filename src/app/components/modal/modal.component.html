@@ -7,38 +7,13 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-  <ion-searchbar placeholder="Search"></ion-searchbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item>New Group</ion-item>
-    <ion-item>New Contact</ion-item>
-    <ion-item>New Channel</ion-item>
-  </ion-list>
-  <ion-list>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-    <ion-item>contact</ion-item>
-  </ion-list>
+  <ion-input [(ngModel)]="number1" placeholder="Enter number"></ion-input>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="createChat()">
+      <ion-icon name="send"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

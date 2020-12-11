@@ -11,10 +11,12 @@ export class ChatComponent implements OnInit {
 
   constructor(private _router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.chat);
+  }
 
   public viewChat() {
-    this._router.navigate(['/view-chat'])
+    this._router.navigate(['/view-chat/'])
   }
 
   public deleteChat() {

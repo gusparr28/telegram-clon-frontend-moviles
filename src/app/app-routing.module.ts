@@ -31,7 +31,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/code/code.module').then( m => m.CodePageModule)
   },
   {
-    path: 'view-chat',
+    path: 'view-chat/:id',
     loadChildren: () => import('./pages/view-chat/view-chat.module').then( m => m.ViewChatPageModule)
   },
   {
